@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFProDisplay-Medium.ttf">
+            <string>SFProDisplay-Medium</string>
+        </array>
+        <array key="SFProDisplay-Regular.ttf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Tutorial View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="tutorialViewController" id="BYZ-38-t0r" customClass="TutorialViewController" customModule="MyMoney" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Money" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88g-6a-Zyh">
+                                <rect key="frame" x="122.5" y="207" width="169" height="42"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="36"/>
+                                <color key="textColor" name="TutorialTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4F-3k-eIL">
+                                <rect key="frame" x="40" y="289" width="334" height="35"/>
+                                <string key="text">An application for keeping a log
+of your expenses and calculating profits</string>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="15"/>
+                                <color key="textColor" name="TutorialTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cardImage" translatesAutoresizingMaskIntoConstraints="NO" id="W9R-RF-W1c">
+                                <rect key="frame" x="87" y="344" width="240" height="269"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhE-Kz-MA8">
+                                <rect key="frame" x="127.5" y="712" width="159" height="58"/>
+                                <inset key="contentEdgeInsets" minX="60" minY="20" maxX="60" maxY="20"/>
+                                <state key="normal" title="NEXT"/>
+                            </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="sm1-Lh-Gj7">
+                                <rect key="frame" x="187.5" y="805" width="39" height="37"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="88g-6a-Zyh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AZ9-Gy-8FZ"/>
+                            <constraint firstItem="sm1-Lh-Gj7" firstAttribute="top" secondItem="lhE-Kz-MA8" secondAttribute="bottom" constant="35" id="DBS-r7-sJk"/>
+                            <constraint firstItem="g4F-3k-eIL" firstAttribute="top" secondItem="88g-6a-Zyh" secondAttribute="bottom" constant="40" id="LR9-0e-enw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sm1-Lh-Gj7" secondAttribute="bottom" constant="20" id="LSk-6d-vRG"/>
+                            <constraint firstItem="lhE-Kz-MA8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TFS-HP-dMS"/>
+                            <constraint firstItem="g4F-3k-eIL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="WpD-TG-1tZ"/>
+                            <constraint firstItem="W9R-RF-W1c" firstAttribute="top" secondItem="g4F-3k-eIL" secondAttribute="bottom" constant="20" id="XJ5-KV-9HM"/>
+                            <constraint firstItem="W9R-RF-W1c" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.57971" id="Z3B-dD-lve"/>
+                            <constraint firstItem="sm1-Lh-Gj7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dbD-7a-gIl"/>
+                            <constraint firstItem="88g-6a-Zyh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" multiplier="0.5" constant="185" id="dw6-5Q-LVW"/>
+                            <constraint firstItem="W9R-RF-W1c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eKb-0Y-W1L"/>
+                            <constraint firstItem="g4F-3k-eIL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lxH-b2-mdk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="g4F-3k-eIL" secondAttribute="trailing" constant="40" id="m88-6x-uja"/>
+                            <constraint firstItem="W9R-RF-W1c" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="saR-Qf-5dK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonStep" destination="lhE-Kz-MA8" id="vZx-5m-qMk"/>
+                        <outlet property="descriptionLabel" destination="g4F-3k-eIL" id="Ko4-gs-WAL"/>
+                        <outlet property="pageControl" destination="sm1-Lh-Gj7" id="lhE-JK-v3I"/>
+                        <outlet property="tutorialImageView" destination="W9R-RF-W1c" id="Sl6-Hh-4UO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1926.0869565217392" y="116.51785714285714"/>
+        </scene>
+        <!--NavigationViewController-->
+        <scene sceneID="tGi-if-i9y">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Auth" referencedIdentifier="NavigationViewController" id="6eR-Mh-f3L" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="XrS-lA-nwc"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ujl-k2-8P6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2584.7826086956525" y="96.428571428571431"/>
+        </scene>
+        <!--Tutorial Page View Controller-->
+        <scene sceneID="8La-jn-itp">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="6WJ-Bg-LO4" customClass="TutorialPageViewController" customModule="MyMoney" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ckZ-Yg-u89"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yVs-wm-0WJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1226.0869565217392" y="116.51785714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cardImage" width="361" height="192"/>
+        <namedColor name="TutorialTextColor">
+            <color red="0.47099998593330383" green="0.51800000667572021" blue="0.62000000476837158" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

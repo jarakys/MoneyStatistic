@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFProDisplay-Medium.ttf">
+            <string>SFProDisplay-Medium</string>
+        </array>
+        <array key="SFProDisplay-Regular.ttf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="7RG-nl-P8i">
+            <objects>
+                <navigationController storyboardIdentifier="AuthController" id="tAa-vq-pDZ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="J72-U1-4E0">
+                        <rect key="frame" x="0.0" y="44" width="414" height="98"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="AuthButtonColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="40"/>
+                            <color key="textColor" name="AuthButtonColor"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="40"/>
+                            <color key="textColor" name="AuthButtonColor"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="haG-xh-77r" kind="relationship" relationship="rootViewController" id="0E1-Qi-BMU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LUF-A8-QTh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-709" y="133"/>
+        </scene>
+        <!--Log in-->
+        <scene sceneID="8Z7-hQ-9CC">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="haG-xh-77r" customClass="LoginViewController" customModule="MyMoney" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tW3-gy-Qvv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jur-wn-W94">
+                                <rect key="frame" x="20" y="182" width="374" height="62.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lP0-ze-FCs">
+                                <rect key="frame" x="20" y="274.5" width="374" height="63"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="255" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="dI1-oH-Dam">
+                                <rect key="frame" x="20" y="377.5" width="374" height="53.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="254" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u4P-Om-r8w">
+                                        <rect key="frame" x="0.0" y="0.0" width="149.5" height="53.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="17"/>
+                                        <state key="normal" title="Sing up">
+                                            <color key="titleColor" name="AuthButtonColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBouce" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="h0B-ga-Zli" kind="show" id="ght-hg-Tup"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufX-lY-PLJ">
+                                        <rect key="frame" x="149.5" y="0.0" width="224.5" height="53.5"/>
+                                        <color key="backgroundColor" name="AuthButtonColor"/>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="17"/>
+                                        <state key="normal" title="Log in">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBouce" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="loginDidTap:" destination="haG-xh-77r" eventType="touchUpInside" id="Nf2-lq-ss4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="u4P-Om-r8w" firstAttribute="width" secondItem="dI1-oH-Dam" secondAttribute="width" multiplier="0.4" id="JC0-0n-gpK"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="EyM-IN-0ma" firstAttribute="trailing" secondItem="jur-wn-W94" secondAttribute="trailing" constant="20" id="4N2-8W-qQM"/>
+                            <constraint firstItem="jur-wn-W94" firstAttribute="leading" secondItem="EyM-IN-0ma" secondAttribute="leading" constant="20" id="ANi-dq-SC8"/>
+                            <constraint firstItem="jur-wn-W94" firstAttribute="top" secondItem="EyM-IN-0ma" secondAttribute="top" constant="40" id="BPU-xX-cnI"/>
+                            <constraint firstItem="lP0-ze-FCs" firstAttribute="leading" secondItem="EyM-IN-0ma" secondAttribute="leading" constant="20" id="Cia-pF-SHj"/>
+                            <constraint firstItem="dI1-oH-Dam" firstAttribute="height" secondItem="tW3-gy-Qvv" secondAttribute="height" multiplier="0.06" id="TSo-oh-Dyv"/>
+                            <constraint firstItem="EyM-IN-0ma" firstAttribute="trailing" secondItem="dI1-oH-Dam" secondAttribute="trailing" constant="20" id="Tu6-uN-jJA"/>
+                            <constraint firstItem="dI1-oH-Dam" firstAttribute="leading" secondItem="EyM-IN-0ma" secondAttribute="leading" constant="20" id="UGQ-Kd-UQO"/>
+                            <constraint firstItem="jur-wn-W94" firstAttribute="height" secondItem="tW3-gy-Qvv" secondAttribute="height" multiplier="0.07" id="Z2Q-zQ-Yne"/>
+                            <constraint firstItem="lP0-ze-FCs" firstAttribute="height" secondItem="tW3-gy-Qvv" secondAttribute="height" multiplier="0.07" id="cGX-rs-UIq"/>
+                            <constraint firstItem="EyM-IN-0ma" firstAttribute="trailing" secondItem="lP0-ze-FCs" secondAttribute="trailing" constant="20" id="q1i-P4-Wo1"/>
+                            <constraint firstItem="lP0-ze-FCs" firstAttribute="top" secondItem="jur-wn-W94" secondAttribute="bottom" constant="30" id="x57-vy-d3M"/>
+                            <constraint firstItem="dI1-oH-Dam" firstAttribute="top" secondItem="lP0-ze-FCs" secondAttribute="bottom" constant="40" id="xNT-ng-web"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EyM-IN-0ma"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Log in" largeTitleDisplayMode="always" id="Hgq-eu-lYX">
+                        <barButtonItem key="backBarButtonItem" title=" " id="gzT-q7-s0n"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="emailTextField" destination="jur-wn-W94" id="Fr5-K3-nwI"/>
+                        <outlet property="passwordTextField" destination="lP0-ze-FCs" id="wwE-vL-odo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bg3-Xf-Fjb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="63.768115942028992" y="130.58035714285714"/>
+        </scene>
+        <!--Sing Up-->
+        <scene sceneID="8qu-hh-GkJ">
+            <objects>
+                <viewController id="h0B-ga-Zli" customClass="RegisterViewController" customModule="MyMoney" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S58-4F-qyt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sX4-Ww-b3F">
+                                <rect key="frame" x="20" y="182" width="374" height="62.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" keyboardType="namePhonePad" textContentType="name"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o7N-RC-C6v">
+                                <rect key="frame" x="20" y="274.5" width="374" height="63"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4hZ-qS-j0q">
+                                <rect key="frame" x="20" y="367.5" width="374" height="62.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Td4-nB-GJt">
+                                <rect key="frame" x="20" y="460" width="374" height="63"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="username"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="NHX-fV-YRD">
+                                <rect key="frame" x="20" y="563" width="374" height="53.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PHy-Ai-q8M">
+                                        <rect key="frame" x="0.0" y="0.0" width="149.5" height="53.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="17"/>
+                                        <state key="normal" title="Log in">
+                                            <color key="titleColor" name="AuthButtonColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBouce" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="wiY-lE-pu9" kind="unwind" unwindAction="unwindToLoginWithSegue:" id="IMf-M1-SXt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqh-2Y-tqD">
+                                        <rect key="frame" x="149.5" y="0.0" width="224.5" height="53.5"/>
+                                        <color key="backgroundColor" name="AuthButtonColor"/>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="17"/>
+                                        <state key="normal" title="Sign up">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBouce" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="registerDidTap:" destination="h0B-ga-Zli" eventType="touchUpInside" id="sLc-9c-83K"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="PHy-Ai-q8M" firstAttribute="width" secondItem="NHX-fV-YRD" secondAttribute="width" multiplier="0.4" id="4FH-Ba-tOj"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Qxz-lM-i0H" firstAttribute="trailing" secondItem="o7N-RC-C6v" secondAttribute="trailing" constant="20" id="14J-xs-kwb"/>
+                            <constraint firstItem="sX4-Ww-b3F" firstAttribute="leading" secondItem="Qxz-lM-i0H" secondAttribute="leading" constant="20" id="2EC-HY-8zN"/>
+                            <constraint firstItem="o7N-RC-C6v" firstAttribute="leading" secondItem="Qxz-lM-i0H" secondAttribute="leading" constant="20" id="IR8-93-ZBE"/>
+                            <constraint firstItem="Td4-nB-GJt" firstAttribute="height" secondItem="S58-4F-qyt" secondAttribute="height" multiplier="0.07" id="PDd-70-d37"/>
+                            <constraint firstItem="NHX-fV-YRD" firstAttribute="leading" secondItem="Qxz-lM-i0H" secondAttribute="leading" constant="20" id="QLW-Ku-qt2"/>
+                            <constraint firstItem="NHX-fV-YRD" firstAttribute="top" secondItem="Td4-nB-GJt" secondAttribute="bottom" constant="40" id="SOh-ah-4Y6"/>
+                            <constraint firstItem="Td4-nB-GJt" firstAttribute="leading" secondItem="Qxz-lM-i0H" secondAttribute="leading" constant="20" id="Sej-iM-Zv0"/>
+                            <constraint firstItem="4hZ-qS-j0q" firstAttribute="top" secondItem="o7N-RC-C6v" secondAttribute="bottom" constant="30" id="ch0-yC-iMS"/>
+                            <constraint firstItem="NHX-fV-YRD" firstAttribute="height" secondItem="S58-4F-qyt" secondAttribute="height" multiplier="0.06" id="dTt-Rr-Die"/>
+                            <constraint firstItem="Qxz-lM-i0H" firstAttribute="trailing" secondItem="sX4-Ww-b3F" secondAttribute="trailing" constant="20" id="fBj-MP-OAV"/>
+                            <constraint firstItem="sX4-Ww-b3F" firstAttribute="top" secondItem="Qxz-lM-i0H" secondAttribute="top" constant="40" id="hMh-ut-u0L"/>
+                            <constraint firstItem="Qxz-lM-i0H" firstAttribute="trailing" secondItem="4hZ-qS-j0q" secondAttribute="trailing" constant="20" id="heM-pW-jhV"/>
+                            <constraint firstItem="o7N-RC-C6v" firstAttribute="top" secondItem="sX4-Ww-b3F" secondAttribute="bottom" constant="30" id="ihI-3F-aCb"/>
+                            <constraint firstItem="4hZ-qS-j0q" firstAttribute="height" secondItem="S58-4F-qyt" secondAttribute="height" multiplier="0.07" id="lKJ-D7-0mx"/>
+                            <constraint firstItem="o7N-RC-C6v" firstAttribute="height" secondItem="S58-4F-qyt" secondAttribute="height" multiplier="0.07" id="m0i-We-4jx"/>
+                            <constraint firstItem="Td4-nB-GJt" firstAttribute="top" secondItem="4hZ-qS-j0q" secondAttribute="bottom" constant="30" id="pqB-RJ-WYa"/>
+                            <constraint firstItem="sX4-Ww-b3F" firstAttribute="height" secondItem="S58-4F-qyt" secondAttribute="height" multiplier="0.07" id="tMQ-JB-3lo"/>
+                            <constraint firstItem="Qxz-lM-i0H" firstAttribute="trailing" secondItem="NHX-fV-YRD" secondAttribute="trailing" constant="20" id="tUL-FT-YPR"/>
+                            <constraint firstItem="4hZ-qS-j0q" firstAttribute="leading" secondItem="Qxz-lM-i0H" secondAttribute="leading" constant="20" id="xal-P5-HCQ"/>
+                            <constraint firstItem="Qxz-lM-i0H" firstAttribute="trailing" secondItem="Td4-nB-GJt" secondAttribute="trailing" constant="20" id="y6v-gm-Iam"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Qxz-lM-i0H"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sing Up" largeTitleDisplayMode="always" id="FFV-1W-J5S"/>
+                    <connections>
+                        <outlet property="confirmPasswordTextField" destination="Td4-nB-GJt" id="vvO-Fg-xbR"/>
+                        <outlet property="emailTextField" destination="o7N-RC-C6v" id="Wjc-Da-KCR"/>
+                        <outlet property="nameTextField" destination="sX4-Ww-b3F" id="ve9-Eb-JJ6"/>
+                        <outlet property="passwordTextField" destination="4hZ-qS-j0q" id="JbG-V1-Zwl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9QM-cs-Cv2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="wiY-lE-pu9" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="127"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AuthButtonColor">
+            <color red="0.47099998593330383" green="0.51800000667572021" blue="0.62000000476837158" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

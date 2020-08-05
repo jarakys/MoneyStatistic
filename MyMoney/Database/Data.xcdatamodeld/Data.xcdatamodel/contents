@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F96" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CostData" representedClassName="CostData" syncable="YES">
+        <attribute name="date" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isSynced" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="sum" attributeType="Decimal" defaultValueString="0.0"/>
+        <relationship name="subcategory" maxCount="1" deletionRule="Nullify" destinationEntity="Subcategories" inverseName="subcategory" inverseEntity="Subcategories"/>
+        <relationship name="type" maxCount="1" deletionRule="Nullify" destinationEntity="Types" inverseName="idType" inverseEntity="Types"/>
+    </entity>
+    <entity name="Subcategories" representedClassName="Subcategories" syncable="YES">
+        <attribute name="imageBytes" attributeType="Binary"/>
+        <attribute name="name" attributeType="String"/>
+        <relationship name="subcategory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CostData" inverseName="subcategory" inverseEntity="CostData"/>
+    </entity>
+    <entity name="Types" representedClassName="Types" syncable="YES">
+        <attribute name="type" attributeType="String"/>
+        <relationship name="idType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CostData" inverseName="type" inverseEntity="CostData"/>
+    </entity>
+    <elements>
+        <element name="CostData" positionX="-63.96484375" positionY="-82.90625" width="150.43359375" height="118"/>
+        <element name="Types" positionX="174.609375" positionY="-24.24609375" width="128" height="73"/>
+        <element name="Subcategories" positionX="72" positionY="-9" width="128" height="88"/>
+    </elements>
+</model>
