@@ -39,8 +39,8 @@ class ChartView: UIView {
     }
     
     func configurePieChart(colors: [UIColor], dataEntries: [PieChartDataEntry]) {
-        charDataSet = PieChartDataSet(entries: dataEntries, label: nil)
-        let chartData = PieChartData(dataSet: charDataSet)
+        charDataSet = PieChartDataSet(entries: dataEntries, label: "")
+        let chartData = PieChartData(dataSet: charDataSet!)
         charDataSet?.colors = colors
         charDataSet?.drawValuesEnabled = true
         charDataSet?.valueLinePart1OffsetPercentage = 0.5;

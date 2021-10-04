@@ -3,11 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D0D3ECED0C1DBE6BE101B035 /* Pods_MyMoney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 446E5F9AC78854F2079A4DE0 /* Pods_MyMoney.framework */; };
 		ED0435B4247D992A00403CC2 /* FadeAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0435B3247D992A00403CC2 /* FadeAnimator.swift */; };
 		ED0435B7247DAB9700403CC2 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0435B6247DAB9700403CC2 /* StoryboardInstantiable.swift */; };
 		ED0435B9247DAC0500403CC2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0435B8247DAC0500403CC2 /* BaseViewController.swift */; };
@@ -46,7 +45,6 @@
 		ED6F93D423F9D8AC00472C8B /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6F93D323F9D8AC00472C8B /* Settings.swift */; };
 		ED6F93D623F9D9F500472C8B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6F93D523F9D9F500472C8B /* SettingsViewController.swift */; };
 		ED7B0FF92483A94300F5782B /* BalanceDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7B0FF82483A94300F5782B /* BalanceDataViewController.swift */; };
-		ED7BB29A24C0C66200014AFD /* ChartValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7BB29924C0C66200014AFD /* ChartValueFormatter.swift */; };
 		ED7BB29E24C19D6600014AFD /* Data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ED7BB29C24C19D6600014AFD /* Data.xcdatamodeld */; };
 		ED7BB2A024C1A25100014AFD /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7BB29F24C1A25000014AFD /* DatabaseManager.swift */; };
 		ED7BB2B624C1ABF200014AFD /* Date+getFormatDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7BB2B524C1ABF200014AFD /* Date+getFormatDate.swift */; };
@@ -59,6 +57,7 @@
 		ED7BB2CA24C1C66200014AFD /* BlurLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7BB2C924C1C66200014AFD /* BlurLoader.swift */; };
 		ED7BB2CC24C1C67300014AFD /* UIView+blurLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7BB2CB24C1C67300014AFD /* UIView+blurLoader.swift */; };
 		ED7BB2CE24C1C6D200014AFD /* UIViewController+presentAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7BB2CD24C1C6D200014AFD /* UIViewController+presentAlert.swift */; };
+		EDB100FF270B033200140B23 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = EDB100FE270B033200140B23 /* Charts */; };
 		EDC5F8082411AB0D0074522F /* PurchaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC5F8072411AB0D0074522F /* PurchaseTableViewCell.swift */; };
 		EDDC454324A21059006E524B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDDC454224A21059006E524B /* GoogleService-Info.plist */; };
 		EDDC454624A21B38006E524B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDC454524A21B38006E524B /* Coordinator.swift */; };
@@ -67,9 +66,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		446E5F9AC78854F2079A4DE0 /* Pods_MyMoney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyMoney.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7530E9506F4880DBB83D43EB /* Pods-MyMoney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMoney.debug.xcconfig"; path = "Target Support Files/Pods-MyMoney/Pods-MyMoney.debug.xcconfig"; sourceTree = "<group>"; };
-		DE89D5903D88F4734B2D6AA6 /* Pods-MyMoney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMoney.release.xcconfig"; path = "Target Support Files/Pods-MyMoney/Pods-MyMoney.release.xcconfig"; sourceTree = "<group>"; };
 		ED0435B3247D992A00403CC2 /* FadeAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeAnimator.swift; sourceTree = "<group>"; };
 		ED0435B6247DAB9700403CC2 /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
 		ED0435B8247DAC0500403CC2 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -135,30 +131,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0D3ECED0C1DBE6BE101B035 /* Pods_MyMoney.framework in Frameworks */,
+				EDB100FF270B033200140B23 /* Charts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4C57EFC61E3F9C0DF7692A7A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				446E5F9AC78854F2079A4DE0 /* Pods_MyMoney.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		CBA729F30AA829FEAA5975C4 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				7530E9506F4880DBB83D43EB /* Pods-MyMoney.debug.xcconfig */,
-				DE89D5903D88F4734B2D6AA6 /* Pods-MyMoney.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		ED0435B2247D991000403CC2 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,8 +194,6 @@
 				ED7BB2BC24C1C12C00014AFD /* Subcategories+CoreDataProperties.swift */,
 				ED6F939623F88C5000472C8B /* MyMoney */,
 				ED6F939523F88C5000472C8B /* Products */,
-				CBA729F30AA829FEAA5975C4 /* Pods */,
-				4C57EFC61E3F9C0DF7692A7A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -400,17 +377,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED6F93A823F88C5300472C8B /* Build configuration list for PBXNativeTarget "MyMoney" */;
 			buildPhases = (
-				10A05C4C1A4F17D66CDC99C9 /* [CP] Check Pods Manifest.lock */,
 				ED6F939023F88C5000472C8B /* Sources */,
 				ED6F939123F88C5000472C8B /* Frameworks */,
 				ED6F939223F88C5000472C8B /* Resources */,
-				C43F3E1EF9253862A2FAA000 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = MyMoney;
+			packageProductDependencies = (
+				EDB100FE270B033200140B23 /* Charts */,
+			);
 			productName = MyMoney;
 			productReference = ED6F939423F88C5000472C8B /* MyMoney.app */;
 			productType = "com.apple.product-type.application";
@@ -439,6 +417,9 @@
 				Base,
 			);
 			mainGroup = ED6F938B23F88C4F00472C8B;
+			packageReferences = (
+				EDB100FD270B033200140B23 /* XCRemoteSwiftPackageReference "Charts" */,
+			);
 			productRefGroup = ED6F939523F88C5000472C8B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -468,48 +449,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		10A05C4C1A4F17D66CDC99C9 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MyMoney-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C43F3E1EF9253862A2FAA000 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MyMoney/Pods-MyMoney-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MyMoney/Pods-MyMoney-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyMoney/Pods-MyMoney-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ED6F939023F88C5000472C8B /* Sources */ = {
@@ -545,7 +484,6 @@
 				ED6F93C423F9686200472C8B /* SegmentControlVIew.swift in Sources */,
 				ED2BF2B12411A36800F5B206 /* StatisticState.swift in Sources */,
 				ED6F93D623F9D9F500472C8B /* SettingsViewController.swift in Sources */,
-				ED7BB29A24C0C66200014AFD /* ChartValueFormatter.swift in Sources */,
 				ED0435B4247D992A00403CC2 /* FadeAnimator.swift in Sources */,
 				ED7BB2CE24C1C6D200014AFD /* UIViewController+presentAlert.swift in Sources */,
 				ED6F93B123F89A6600472C8B /* RegisterViewController.swift in Sources */,
@@ -702,7 +640,6 @@
 		};
 		ED6F93A923F88C5300472C8B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7530E9506F4880DBB83D43EB /* Pods-MyMoney.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -721,7 +658,6 @@
 		};
 		ED6F93AA23F88C5300472C8B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DE89D5903D88F4734B2D6AA6 /* Pods-MyMoney.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -760,6 +696,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EDB100FD270B033200140B23 /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EDB100FE270B033200140B23 /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDB100FD270B033200140B23 /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = Charts;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		ED7BB29C24C19D6600014AFD /* Data.xcdatamodeld */ = {

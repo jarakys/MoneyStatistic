@@ -14,8 +14,8 @@ class LoginViewController: BaseViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        emailTextField.setBottomBorder()
-        passwordTextField.setBottomBorder()
+//        emailTextField.setBottomBorder()
+//        passwordTextField.setBottomBorder()
         // Do any additional setup after loading the view.
     }
     
