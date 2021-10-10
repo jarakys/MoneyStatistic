@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -41,16 +43,17 @@ of your expenses and calculating profits</string>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cardImage" translatesAutoresizingMaskIntoConstraints="NO" id="W9R-RF-W1c">
                                 <rect key="frame" x="87" y="344" width="240" height="269"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhE-Kz-MA8">
-                                <rect key="frame" x="127.5" y="712" width="159" height="58"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhE-Kz-MA8">
+                                <rect key="frame" x="127.5" y="721.5" width="159" height="58"/>
                                 <inset key="contentEdgeInsets" minX="60" minY="20" maxX="60" maxY="20"/>
                                 <state key="normal" title="NEXT"/>
                             </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="sm1-Lh-Gj7">
-                                <rect key="frame" x="187.5" y="805" width="39" height="37"/>
+                                <rect key="frame" x="146.5" y="814.5" width="121.5" height="27.5"/>
                             </pageControl>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="88g-6a-Zyh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AZ9-Gy-8FZ"/>
                             <constraint firstItem="sm1-Lh-Gj7" firstAttribute="top" secondItem="lhE-Kz-MA8" secondAttribute="bottom" constant="35" id="DBS-r7-sJk"/>
@@ -67,7 +70,6 @@ of your expenses and calculating profits</string>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="g4F-3k-eIL" secondAttribute="trailing" constant="40" id="m88-6x-uja"/>
                             <constraint firstItem="W9R-RF-W1c" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="saR-Qf-5dK"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="buttonStep" destination="lhE-Kz-MA8" id="vZx-5m-qMk"/>
@@ -106,5 +108,8 @@ of your expenses and calculating profits</string>
         <namedColor name="TutorialTextColor">
             <color red="0.47099998593330383" green="0.51800000667572021" blue="0.62000000476837158" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

@@ -58,6 +58,7 @@ class SegmentControlView: UIView {
         stack.alignment = .fill
         stack.distribution = .fillEqually
         stack.spacing = 1
+        stack.backgroundColor = .black
         addSubview(stack)
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.topAnchor.constraint(equalTo: self.topAnchor).isActive = true

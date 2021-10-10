@@ -106,7 +106,6 @@
 		ED6F93D323F9D8AC00472C8B /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		ED6F93D523F9D9F500472C8B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		ED7B0FF82483A94300F5782B /* BalanceDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceDataViewController.swift; sourceTree = "<group>"; };
-		ED7BB29924C0C66200014AFD /* ChartValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChartValueFormatter.swift; path = ../../../ChartValueFormatter.swift; sourceTree = "<group>"; };
 		ED7BB29D24C19D6600014AFD /* Data.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Data.xcdatamodel; sourceTree = "<group>"; };
 		ED7BB29F24C1A25000014AFD /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		ED7BB2B524C1ABF200014AFD /* Date+getFormatDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+getFormatDate.swift"; sourceTree = "<group>"; };
@@ -209,7 +208,6 @@
 			isa = PBXGroup;
 			children = (
 				ED7BB29B24C19D4800014AFD /* Database */,
-				ED7BB29824C0C65300014AFD /* Formatters */,
 				EDDC454424A21B23006E524B /* Coordinator */,
 				ED0435B5247DAB6E00403CC2 /* Protocols */,
 				ED0435B2247D991000403CC2 /* Animations */,
@@ -217,7 +215,6 @@
 				ED6F93CF23F9C70A00472C8B /* Extensions */,
 				ED6F93BE23F95B0C00472C8B /* CustomView */,
 				ED6F93B823F9532900472C8B /* Enums */,
-				ED6F93AD23F89A1D00472C8B /* Views */,
 				ED6F93AC23F89A0A00472C8B /* Models */,
 				ED6F93AB23F899FC00472C8B /* ViewControllers */,
 				ED6F939723F88C5000472C8B /* AppDelegate.swift */,
@@ -249,14 +246,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		ED6F93AD23F89A1D00472C8B /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				ED6F93B523F89AA600472C8B /* Tutorial */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		ED6F93B223F89A7D00472C8B /* Auth */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,13 +263,6 @@
 				ED6F939D23F88C5000472C8B /* Main.storyboard */,
 				ED6F93C723F97B8A00472C8B /* TutorialViewController.swift */,
 				ED6F93CD23F980B900472C8B /* TutorialPageViewController.swift */,
-			);
-			path = Tutorial;
-			sourceTree = "<group>";
-		};
-		ED6F93B523F89AA600472C8B /* Tutorial */ = {
-			isa = PBXGroup;
-			children = (
 			);
 			path = Tutorial;
 			sourceTree = "<group>";
@@ -334,14 +316,6 @@
 				ED7BB2CD24C1C6D200014AFD /* UIViewController+presentAlert.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		ED7BB29824C0C65300014AFD /* Formatters */ = {
-			isa = PBXGroup;
-			children = (
-				ED7BB29924C0C66200014AFD /* ChartValueFormatter.swift */,
-			);
-			path = Formatters;
 			sourceTree = "<group>";
 		};
 		ED7BB29B24C19D4800014AFD /* Database */ = {

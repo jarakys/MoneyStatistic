@@ -13,6 +13,12 @@ class StatisticViewController: BaseViewController {
     
     let mockData: [StatisticModel] = [StatisticModel(name: "Eat", icon: "eat", sum: 4444, category: .cost), StatisticModel(name: "Cinema", icon: "cinema", sum: 4444, category: .cost), StatisticModel(name: "salary", icon: "salary", sum: 4444, category: .earn)]
 
+    var state2: Category = .balance {
+        didSet {
+            filterSegmentControl.selectorViewColor = state2.color()
+        }
+    }
+    
     @IBOutlet weak var statisticTableView: UITableView!
     @IBOutlet var chartTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var chartView: ChartView!
@@ -29,8 +35,9 @@ class StatisticViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         filterSegmentControl.delegate = self
-        filterSegmentControl.setButtonTitiles(buttonTitiles: [StatisticState.day.string, StatisticState.week.string, StatisticState.month.string])
+        filterSegmentControl.setButtonTitiles(buttonTitiles: [Category.balance.string, Category.earn.string, Category.cost.string])
         filterSegmentControl.selectorViewColor = state.color()
+        filterSegmentControl.setIndex(index: Category.allCases.firstIndex(of: state) ?? 0)
         balanceDataEntry = PieChartDataEntry(value: 4)
         earnDataEntry = PieChartDataEntry(value: 6)
         costDataEntry = PieChartDataEntry(value: 6)
@@ -54,7 +61,6 @@ class StatisticViewController: BaseViewController {
     private func setStateColors() {
         filterSegmentControl.selectorViewColor = state.color()
     }
-    
     private func setNavigationBarColor() {
         self.navigationController?.navigationBar.tintColor = state.color()
     }
@@ -62,7 +68,7 @@ class StatisticViewController: BaseViewController {
 //MARK: Segment delegate
 extension StatisticViewController : SegmentControlDelegate {
     func changeToIndex(index: Int) {
-        state = Category(rawValue: index)
+        state2 = Category(rawValue: index)
     }
 }
 
