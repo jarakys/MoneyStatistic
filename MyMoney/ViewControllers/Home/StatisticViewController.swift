@@ -13,9 +13,9 @@ class StatisticViewController: BaseViewController {
     
     let mockData: [StatisticModel] = [StatisticModel(name: "Eat", icon: "eat", sum: 4444, category: .cost), StatisticModel(name: "Cinema", icon: "cinema", sum: 4444, category: .cost), StatisticModel(name: "salary", icon: "salary", sum: 4444, category: .earn)]
 
-    var state2: Category = .balance {
+    var state: Category = .balance {
         didSet {
-            filterSegmentControl.selectorViewColor = state2.color()
+            filterSegmentControl.selectorViewColor = state.color()
         }
     }
     
@@ -24,8 +24,6 @@ class StatisticViewController: BaseViewController {
     @IBOutlet weak var chartView: ChartView!
     @IBOutlet weak var filterSegmentControl: SegmentControlView!
     @IBOutlet weak var dropdownImage: UIImageView!
-    
-    var state:Category!
     
     var balanceDataEntry: PieChartDataEntry?
     var earnDataEntry: PieChartDataEntry?
@@ -68,7 +66,7 @@ class StatisticViewController: BaseViewController {
 //MARK: Segment delegate
 extension StatisticViewController : SegmentControlDelegate {
     func changeToIndex(index: Int) {
-        state2 = Category(rawValue: index)
+        state = Category(rawValue: index)
     }
 }
 
