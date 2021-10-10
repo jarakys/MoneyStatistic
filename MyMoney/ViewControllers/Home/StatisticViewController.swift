@@ -13,11 +13,7 @@ class StatisticViewController: BaseViewController {
     
     let mockData: [StatisticModel] = [StatisticModel(name: "Eat", icon: "eat", sum: 4444, category: .cost), StatisticModel(name: "Cinema", icon: "cinema", sum: 4444, category: .cost), StatisticModel(name: "salary", icon: "salary", sum: 4444, category: .earn)]
 
-    var state: Category = .balance {
-        didSet {
-            filterSegmentControl.selectorViewColor = state.color()
-        }
-    }
+    var state: Category = .balance
     
     @IBOutlet weak var statisticTableView: UITableView!
     @IBOutlet var chartTopConstraint: NSLayoutConstraint!
@@ -67,6 +63,7 @@ class StatisticViewController: BaseViewController {
 extension StatisticViewController : SegmentControlDelegate {
     func changeToIndex(index: Int) {
         state = Category(rawValue: index)
+        filterSegmentControl.selectorViewColor = state.color()
     }
 }
 
