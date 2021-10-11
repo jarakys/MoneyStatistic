@@ -23,8 +23,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         coordinator = MainCoordinator(navigationController: navController)
         coordinator?.goToAuth()
         window = UIWindow(windowScene: windowScene)
-        window!.rootViewController = navController
-        window!.makeKeyAndVisible()
+        window?.overrideUserInterfaceStyle = .dark
+        window?.rootViewController = navController
+        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
