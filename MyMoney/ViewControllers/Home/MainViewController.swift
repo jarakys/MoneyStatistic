@@ -35,16 +35,12 @@ class MainViewController: BaseViewController {
         segmentControlView.delegate = self
         segmentControlView.setButtonTitiles(buttonTitiles: [Category.balance.string, Category.earn.string, Category.cost.string])
         segmentControlView.selectorViewColor = state.color()
+        updateCardInfo()
         cardImageView.image = UIImage(named: state.image)!
         floatButton.layer.masksToBounds = true
         floatButton.layer.cornerRadius = floatButton.frame.width / 2
-        
         categoryLabel.text = state.string
-
         dateLabel.text = Date().getFormatDate(format: "dd.MM.YYYY")
-        if let balanceInfo = try? DatabaseManager.shared.getBalanceBy(date: 123123123123) {
-            sumLabel.text = balanceInfo.description
-        }
     }
     
     private func setColor() {
@@ -62,23 +58,17 @@ class MainViewController: BaseViewController {
     }
     
     private func updateCardInfo() {
-        var action:(Int64) throws -> Decimal
-        
+        var action: () -> Float
         switch state {
-            case .balance:
-                action = DatabaseManager.shared.getBalanceBy
-            case .cost:
-                action = DatabaseManager.shared.getCostBy
-            case .earn:
-                action = DatabaseManager.shared.getEarnBy
+        case .balance:
+            action = DatabaseManager.shared.getBalance
+        case .cost:
+            action = DatabaseManager.shared.getSpent
+        case .earn:
+            action = DatabaseManager.shared.getEarn
         }
-        
-        if let moneyInfo = try? action(3434343434) {
-            sumLabel.text = moneyInfo.description
-        }
+        sumLabel.text = action().description
         categoryLabel.text = state.string
-        
-        
     }
     
     @IBAction func floatButtonDidTap(_ sender: Any) {
@@ -93,7 +83,6 @@ class MainViewController: BaseViewController {
     @IBAction func statisticsDidTap(_ sender: Any) {
         let storyboard = UIStoryboard.storyboard(storyboard: .home)
         let statisticViewController: StatisticViewController = storyboard.instantiateViewController()
-        statisticViewController.state = state
         self.navigationController?.pushViewController(statisticViewController, animated: true)
     }
 }

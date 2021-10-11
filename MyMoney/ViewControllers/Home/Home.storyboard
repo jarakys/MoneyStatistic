@@ -7,7 +7,6 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -404,39 +403,7 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="categoryCell" id="Qxi-v4-wMt">
-                                        <rect key="frame" x="0.0" y="0.0" width="259" height="56"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="K6V-GQ-jkK">
-                                            <rect key="frame" x="0.0" y="0.0" width="259" height="56"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cmJ-p1-xbu">
-                                                    <rect key="frame" x="8" y="8" width="40" height="40"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="40" id="2rn-UY-fK9"/>
-                                                        <constraint firstAttribute="height" constant="40" id="TsG-1k-I5M"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AAAAaaaAAAAaaaaAAAA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qno-23-1Oj">
-                                                    <rect key="frame" x="56" y="18" width="195" height="20.333333333333329"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="qno-23-1Oj" firstAttribute="leading" secondItem="cmJ-p1-xbu" secondAttribute="trailing" constant="8" id="KEX-EK-E2w"/>
-                                                <constraint firstAttribute="bottom" secondItem="cmJ-p1-xbu" secondAttribute="bottom" constant="8" id="ZHz-u4-koh"/>
-                                                <constraint firstItem="qno-23-1Oj" firstAttribute="centerY" secondItem="K6V-GQ-jkK" secondAttribute="centerY" id="aWY-Ts-pLc"/>
-                                                <constraint firstItem="cmJ-p1-xbu" firstAttribute="leading" secondItem="K6V-GQ-jkK" secondAttribute="leading" constant="8" id="abk-bQ-XwC"/>
-                                                <constraint firstItem="cmJ-p1-xbu" firstAttribute="top" secondItem="K6V-GQ-jkK" secondAttribute="top" constant="8" id="bAm-32-IWO"/>
-                                                <constraint firstAttribute="trailing" secondItem="qno-23-1Oj" secondAttribute="trailing" constant="8" id="gfT-6l-6Zb"/>
-                                            </constraints>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                             </collectionView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Cmn-zt-Nkz">
                                 <rect key="frame" x="20" y="518.33333333333337" width="374" height="34"/>
@@ -466,7 +433,7 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K53-8h-9GY" customClass="SegmentControlView" customModule="MyMoney" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="3" width="414" height="40"/>
-                                        <color key="backgroundColor" red="0.91537119289340096" green="0.91537119289340096" blue="0.91537119289340096" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="F36-Wy-dYg"/>
                                         </constraints>
@@ -478,12 +445,12 @@
                                                 <color key="value" name="SelectedSegmentTextColor"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="tabBackgroundColor">
-                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="value" systemColor="systemBackgroundColor"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.8659052652150846" green="0.8659052652150846" blue="0.8659052652150846" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="K53-8h-9GY" secondAttribute="bottom" id="9MR-bD-qyG"/>
                                     <constraint firstItem="K53-8h-9GY" firstAttribute="leading" secondItem="hm1-sD-sgg" secondAttribute="leading" id="9sW-AT-FPi"/>
@@ -510,8 +477,10 @@
                     <connections>
                         <outlet property="addButton" destination="yel-n4-f1j" id="BqH-Uh-25k"/>
                         <outlet property="categoriesCollectionView" destination="Rbf-FV-NWy" id="2g8-ah-z1J"/>
+                        <outlet property="categoriesCollectionViewHeightConstraint" destination="qvG-oP-rUh" id="CvV-UR-ePf"/>
                         <outlet property="segmentControlView" destination="K53-8h-9GY" id="xTU-DN-5ll"/>
                         <outlet property="segmentControllerContainer" destination="hm1-sD-sgg" id="3Zm-LY-6LW"/>
+                        <outlet property="sumStackView" destination="Cmn-zt-Nkz" id="rHL-Ua-Miq"/>
                         <outlet property="sumTextField" destination="Sfw-MU-aAH" id="uom-5e-Fhs"/>
                     </connections>
                 </viewController>
