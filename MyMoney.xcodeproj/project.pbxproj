@@ -21,6 +21,9 @@
 		ED2FA13C248447DF00D1EAED /* UIView+RoundedBorders.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2FA13B248447DF00D1EAED /* UIView+RoundedBorders.swift */; };
 		ED2FA13E2484498A00D1EAED /* UIView+AddShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2FA13D2484498A00D1EAED /* UIView+AddShadow.swift */; };
 		ED2FA1402484552500D1EAED /* UIView+BorderLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2FA13F2484552500D1EAED /* UIView+BorderLine.swift */; };
+		ED4CEB4127135485007BD6D4 /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ED4CEB3F27135485007BD6D4 /* Database.xcdatamodeld */; };
+		ED4CEB4327136043007BD6D4 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4CEB4227136043007BD6D4 /* CategoryCell.swift */; };
+		ED4CEB4527136056007BD6D4 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED4CEB4427136056007BD6D4 /* CategoryCell.xib */; };
 		ED4F141523FB24C10082CAD7 /* SFProDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED4F141223FB24C00082CAD7 /* SFProDisplay-Regular.ttf */; };
 		ED4F141623FB24C10082CAD7 /* SFProDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED4F141323FB24C10082CAD7 /* SFProDisplay-Bold.ttf */; };
 		ED4F141723FB24C10082CAD7 /* SFProDisplay-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED4F141423FB24C10082CAD7 /* SFProDisplay-Medium.ttf */; };
@@ -45,15 +48,8 @@
 		ED6F93D423F9D8AC00472C8B /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6F93D323F9D8AC00472C8B /* Settings.swift */; };
 		ED6F93D623F9D9F500472C8B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6F93D523F9D9F500472C8B /* SettingsViewController.swift */; };
 		ED7B0FF92483A94300F5782B /* BalanceDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7B0FF82483A94300F5782B /* BalanceDataViewController.swift */; };
-		ED7BB29E24C19D6600014AFD /* Data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ED7BB29C24C19D6600014AFD /* Data.xcdatamodeld */; };
 		ED7BB2A024C1A25100014AFD /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7BB29F24C1A25000014AFD /* DatabaseManager.swift */; };
 		ED7BB2B624C1ABF200014AFD /* Date+getFormatDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7BB2B524C1ABF200014AFD /* Date+getFormatDate.swift */; };
-		ED7BB2C324C1C18500014AFD /* Types+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7BB2B724C1C12C00014AFD /* Types+CoreDataClass.swift */; };
-		ED7BB2C424C1C18500014AFD /* Types+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7BB2B824C1C12C00014AFD /* Types+CoreDataProperties.swift */; };
-		ED7BB2C524C1C18500014AFD /* CostData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7BB2B924C1C12C00014AFD /* CostData+CoreDataClass.swift */; };
-		ED7BB2C624C1C18500014AFD /* CostData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7BB2BA24C1C12C00014AFD /* CostData+CoreDataProperties.swift */; };
-		ED7BB2C724C1C18500014AFD /* Subcategories+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7BB2BB24C1C12C00014AFD /* Subcategories+CoreDataClass.swift */; };
-		ED7BB2C824C1C18500014AFD /* Subcategories+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7BB2BC24C1C12C00014AFD /* Subcategories+CoreDataProperties.swift */; };
 		ED7BB2CA24C1C66200014AFD /* BlurLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7BB2C924C1C66200014AFD /* BlurLoader.swift */; };
 		ED7BB2CC24C1C67300014AFD /* UIView+blurLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7BB2CB24C1C67300014AFD /* UIView+blurLoader.swift */; };
 		ED7BB2CE24C1C6D200014AFD /* UIViewController+presentAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7BB2CD24C1C6D200014AFD /* UIViewController+presentAlert.swift */; };
@@ -80,6 +76,9 @@
 		ED2FA13B248447DF00D1EAED /* UIView+RoundedBorders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+RoundedBorders.swift"; sourceTree = "<group>"; };
 		ED2FA13D2484498A00D1EAED /* UIView+AddShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AddShadow.swift"; sourceTree = "<group>"; };
 		ED2FA13F2484552500D1EAED /* UIView+BorderLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+BorderLine.swift"; sourceTree = "<group>"; };
+		ED4CEB4027135485007BD6D4 /* Database.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Database.xcdatamodel; sourceTree = "<group>"; };
+		ED4CEB4227136043007BD6D4 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		ED4CEB4427136056007BD6D4 /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
 		ED4F141223FB24C00082CAD7 /* SFProDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Regular.ttf"; sourceTree = "<group>"; };
 		ED4F141323FB24C10082CAD7 /* SFProDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Bold.ttf"; sourceTree = "<group>"; };
 		ED4F141423FB24C10082CAD7 /* SFProDisplay-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Medium.ttf"; sourceTree = "<group>"; };
@@ -106,15 +105,8 @@
 		ED6F93D323F9D8AC00472C8B /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		ED6F93D523F9D9F500472C8B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		ED7B0FF82483A94300F5782B /* BalanceDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceDataViewController.swift; sourceTree = "<group>"; };
-		ED7BB29D24C19D6600014AFD /* Data.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Data.xcdatamodel; sourceTree = "<group>"; };
 		ED7BB29F24C1A25000014AFD /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		ED7BB2B524C1ABF200014AFD /* Date+getFormatDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+getFormatDate.swift"; sourceTree = "<group>"; };
-		ED7BB2B724C1C12C00014AFD /* Types+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Types+CoreDataClass.swift"; sourceTree = "<group>"; };
-		ED7BB2B824C1C12C00014AFD /* Types+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Types+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		ED7BB2B924C1C12C00014AFD /* CostData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CostData+CoreDataClass.swift"; sourceTree = "<group>"; };
-		ED7BB2BA24C1C12C00014AFD /* CostData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CostData+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		ED7BB2BB24C1C12C00014AFD /* Subcategories+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Subcategories+CoreDataClass.swift"; sourceTree = "<group>"; };
-		ED7BB2BC24C1C12C00014AFD /* Subcategories+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Subcategories+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		ED7BB2C924C1C66200014AFD /* BlurLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurLoader.swift; sourceTree = "<group>"; };
 		ED7BB2CB24C1C67300014AFD /* UIView+blurLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+blurLoader.swift"; sourceTree = "<group>"; };
 		ED7BB2CD24C1C6D200014AFD /* UIViewController+presentAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+presentAlert.swift"; sourceTree = "<group>"; };
@@ -168,6 +160,8 @@
 			children = (
 				ED4F141123FB24960082CAD7 /* Fonts */,
 				ED6F93A023F88C5300472C8B /* Assets.xcassets */,
+				ED4CEB3F27135485007BD6D4 /* Database.xcdatamodeld */,
+				ED4CEB4427136056007BD6D4 /* CategoryCell.xib */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -185,12 +179,6 @@
 		ED6F938B23F88C4F00472C8B = {
 			isa = PBXGroup;
 			children = (
-				ED7BB2B724C1C12C00014AFD /* Types+CoreDataClass.swift */,
-				ED7BB2B824C1C12C00014AFD /* Types+CoreDataProperties.swift */,
-				ED7BB2B924C1C12C00014AFD /* CostData+CoreDataClass.swift */,
-				ED7BB2BA24C1C12C00014AFD /* CostData+CoreDataProperties.swift */,
-				ED7BB2BB24C1C12C00014AFD /* Subcategories+CoreDataClass.swift */,
-				ED7BB2BC24C1C12C00014AFD /* Subcategories+CoreDataProperties.swift */,
 				ED6F939623F88C5000472C8B /* MyMoney */,
 				ED6F939523F88C5000472C8B /* Products */,
 			);
@@ -322,7 +310,6 @@
 			isa = PBXGroup;
 			children = (
 				ED7BB29F24C1A25000014AFD /* DatabaseManager.swift */,
-				ED7BB29C24C19D6600014AFD /* Data.xcdatamodeld */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -332,6 +319,7 @@
 			children = (
 				ED1D2A3324AA04B900D49024 /* StatisticCell */,
 				EDC5F8072411AB0D0074522F /* PurchaseTableViewCell.swift */,
+				ED4CEB4227136043007BD6D4 /* CategoryCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -415,6 +403,7 @@
 				ED6F93A423F88C5300472C8B /* LaunchScreen.storyboard in Resources */,
 				ED4F141523FB24C10082CAD7 /* SFProDisplay-Regular.ttf in Resources */,
 				EDDC454824A37510006E524B /* ChartView.xib in Resources */,
+				ED4CEB4527136056007BD6D4 /* CategoryCell.xib in Resources */,
 				ED4F141623FB24C10082CAD7 /* SFProDisplay-Bold.ttf in Resources */,
 				ED6F93A123F88C5300472C8B /* Assets.xcassets in Resources */,
 				ED1D2A3524AA050F00D49024 /* StatisticCell.xib in Resources */,
@@ -429,12 +418,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED7BB2C324C1C18500014AFD /* Types+CoreDataClass.swift in Sources */,
-				ED7BB2C424C1C18500014AFD /* Types+CoreDataProperties.swift in Sources */,
-				ED7BB2C524C1C18500014AFD /* CostData+CoreDataClass.swift in Sources */,
-				ED7BB2C624C1C18500014AFD /* CostData+CoreDataProperties.swift in Sources */,
-				ED7BB2C724C1C18500014AFD /* Subcategories+CoreDataClass.swift in Sources */,
-				ED7BB2C824C1C18500014AFD /* Subcategories+CoreDataProperties.swift in Sources */,
 				ED7BB2B624C1ABF200014AFD /* Date+getFormatDate.swift in Sources */,
 				ED6F93CC23F97E4000472C8B /* TutorialStep.swift in Sources */,
 				ED6F93AF23F89A4900472C8B /* LoginViewController.swift in Sources */,
@@ -444,7 +427,6 @@
 				ED0435B7247DAB9700403CC2 /* StoryboardInstantiable.swift in Sources */,
 				ED6F93CE23F980B900472C8B /* TutorialPageViewController.swift in Sources */,
 				ED1D2A3924AA05BC00D49024 /* StatisticCell.swift in Sources */,
-				ED7BB29E24C19D6600014AFD /* Data.xcdatamodeld in Sources */,
 				ED6F93C823F97B8A00472C8B /* TutorialViewController.swift in Sources */,
 				EDDC454A24A37551006E524B /* ChartView.swift in Sources */,
 				ED0435B9247DAC0500403CC2 /* BaseViewController.swift in Sources */,
@@ -460,7 +442,9 @@
 				ED6F93D623F9D9F500472C8B /* SettingsViewController.swift in Sources */,
 				ED0435B4247D992A00403CC2 /* FadeAnimator.swift in Sources */,
 				ED7BB2CE24C1C6D200014AFD /* UIViewController+presentAlert.swift in Sources */,
+				ED4CEB4127135485007BD6D4 /* Database.xcdatamodeld in Sources */,
 				ED6F93B123F89A6600472C8B /* RegisterViewController.swift in Sources */,
+				ED4CEB4327136043007BD6D4 /* CategoryCell.swift in Sources */,
 				ED6F939C23F88C5000472C8B /* ViewController.swift in Sources */,
 				ED2FA13C248447DF00D1EAED /* UIView+RoundedBorders.swift in Sources */,
 				ED7BB2CC24C1C67300014AFD /* UIView+blurLoader.swift in Sources */,
@@ -617,7 +601,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 77UT86MNKK;
+				DEVELOPMENT_TEAM = 6NNWR2JHQ8;
 				INFOPLIST_FILE = MyMoney/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -635,7 +619,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 77UT86MNKK;
+				DEVELOPMENT_TEAM = 6NNWR2JHQ8;
 				INFOPLIST_FILE = MyMoney/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -691,13 +675,13 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		ED7BB29C24C19D6600014AFD /* Data.xcdatamodeld */ = {
+		ED4CEB3F27135485007BD6D4 /* Database.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				ED7BB29D24C19D6600014AFD /* Data.xcdatamodel */,
+				ED4CEB4027135485007BD6D4 /* Database.xcdatamodel */,
 			);
-			currentVersion = ED7BB29D24C19D6600014AFD /* Data.xcdatamodel */;
-			path = Data.xcdatamodeld;
+			currentVersion = ED4CEB4027135485007BD6D4 /* Database.xcdatamodel */;
+			path = Database.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
