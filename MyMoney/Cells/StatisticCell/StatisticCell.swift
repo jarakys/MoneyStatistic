@@ -10,24 +10,18 @@ import UIKit
 
 class StatisticCell: UITableViewCell, ReusableCell {
 
-    @IBOutlet weak var iconImageView: UIImageView!
-    @IBOutlet weak var nameCategoryLabel: UILabel!
-    @IBOutlet weak var sumLabel: UILabel!
+    @IBOutlet private weak var categoryIndicatorVIew: UIView!
+    @IBOutlet private weak var nameCategoryLabel: UILabel!
+    @IBOutlet private weak var sumLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        categoryIndicatorVIew.layer.cornerRadius = categoryIndicatorVIew.frame.height / 2
+        categoryIndicatorVIew.layer.masksToBounds = true
     }
     
-    func configure(icon: String, nameCategory: String, sum: String) {
-        self.iconImageView.image = UIImage(named: icon)
-        self.nameCategoryLabel.text = nameCategory
-        self.sumLabel.text = sum
+    func configure(for report: Reports?) {
+        nameCategoryLabel.text = report?.category?.name
+        sumLabel.text = report?.value.description
+        categoryIndicatorVIew.backgroundColor = .red
     }
-
 }

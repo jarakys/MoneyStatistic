@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,15 +17,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="59"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="De5-HH-hXT">
-                        <rect key="frame" x="8" y="9.5" width="40" height="40"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="40" id="Aib-63-oKl"/>
-                            <constraint firstAttribute="width" constant="40" id="SYH-sq-881"/>
-                        </constraints>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Labelasdoijasodaoskdaksjdlaskdklasd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wij-EE-z9P">
-                        <rect key="frame" x="68" y="19" width="276" height="21"/>
+                        <rect key="frame" x="38" y="19" width="288" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -34,24 +29,37 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7fu-Ku-c66">
+                        <rect key="frame" x="8" y="24.5" width="10" height="10"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="10" id="Yir-5u-zK7"/>
+                            <constraint firstAttribute="height" constant="10" id="b05-qi-BVh"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="De5-HH-hXT" firstAttribute="centerY" secondItem="N6q-nB-0eq" secondAttribute="centerY" id="9Z1-Iw-zS3"/>
+                    <constraint firstItem="7fu-Ku-c66" firstAttribute="leading" secondItem="N6q-nB-0eq" secondAttribute="leading" constant="8" id="A0F-au-FDq"/>
                     <constraint firstAttribute="trailing" secondItem="Orb-f3-cb9" secondAttribute="trailing" constant="8" id="Drp-de-rwL"/>
                     <constraint firstItem="Orb-f3-cb9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wij-EE-z9P" secondAttribute="trailing" constant="20" id="MES-jx-G9Z"/>
                     <constraint firstItem="wij-EE-z9P" firstAttribute="centerY" secondItem="N6q-nB-0eq" secondAttribute="centerY" id="Sxr-7D-R9C"/>
-                    <constraint firstItem="wij-EE-z9P" firstAttribute="leading" secondItem="De5-HH-hXT" secondAttribute="trailing" constant="20" id="Tgl-i0-I3z"/>
-                    <constraint firstItem="De5-HH-hXT" firstAttribute="leading" secondItem="N6q-nB-0eq" secondAttribute="leading" constant="8" id="ayH-wh-9Bl"/>
+                    <constraint firstItem="7fu-Ku-c66" firstAttribute="centerY" secondItem="N6q-nB-0eq" secondAttribute="centerY" id="Zef-RX-9Ev"/>
                     <constraint firstItem="Orb-f3-cb9" firstAttribute="centerY" secondItem="N6q-nB-0eq" secondAttribute="centerY" id="fj1-bT-kQj"/>
+                    <constraint firstItem="wij-EE-z9P" firstAttribute="leading" secondItem="7fu-Ku-c66" secondAttribute="trailing" constant="20" id="u4H-Hy-kXA"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="backgroundView" destination="N6q-nB-0eq" id="qgw-a7-VbI"/>
-                <outlet property="iconImageView" destination="De5-HH-hXT" id="0lb-RV-91n"/>
+                <outlet property="categoryIndicatorVIew" destination="7fu-Ku-c66" id="J0b-vX-LG6"/>
                 <outlet property="nameCategoryLabel" destination="wij-EE-z9P" id="A23-sj-gJT"/>
                 <outlet property="sumLabel" destination="Orb-f3-cb9" id="TS1-Ca-2Wy"/>
             </connections>
             <point key="canvasLocation" x="-449.27536231884062" y="79.352678571428569"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
