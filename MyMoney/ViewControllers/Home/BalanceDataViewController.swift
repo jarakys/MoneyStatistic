@@ -10,10 +10,12 @@ import UIKit
 
 class BalanceDataViewController: UIViewController, StoryboardInstantiable {
     
+    @IBOutlet weak var sumStacView: UIStackView!
     @IBOutlet weak var segmentControllerContainer: UIView!
     @IBOutlet weak var segmentControlView: SegmentControlView!
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var sumTextField: UITextField!
+    @IBOutlet weak var categoriesCollectionViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var categoriesCollectionView: UICollectionView!
     
     var state: Category!
@@ -41,11 +43,39 @@ class BalanceDataViewController: UIViewController, StoryboardInstantiable {
         }
         updateColors()
         segmentControlView.setIndex(index: index)
+        registerKeyboardNotification()
 
     }
 
+    func registerKeyboardNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo? [UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue{
+//            self.categoriesCollectionView.frame.size.height -= (keyboardSize.height + sumTextField.frame.size.height)
+            
+            
+            if sumStacView.frame.origin.y + sumStacView.frame.height + 20 > keyboardSize.origin.y {
+                
+                let size = sumStacView.frame.origin.y - keyboardSize.origin.y + sumStacView.frame.height
+                let offset = size + ((20 - size) * -1)
+                categoriesCollectionViewHeightConstraint.constant = offset
+                categoriesCollectionView.updateConstraints()
+            }
+            
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification){
+        if self.view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
+        }
+    }
+    
     func updateColors() {
-//        self.navigationController?.navigationBar.tintColor = state.color()
         segmentControlView.selectorViewColor = state.color()
         addButton.backgroundColor = state.color()
     }
@@ -72,7 +102,7 @@ extension BalanceDataViewController: UICollectionViewDataSource {
     }
 }
 
-extension BalanceDataViewController: UICollectionViewDelegate {
+extension BalanceDataViewController: UICollectionViewDelegateFlowLayout {
     
 }
 
