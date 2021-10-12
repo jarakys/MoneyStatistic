@@ -19,7 +19,6 @@ class StatisticViewController: BaseViewController {
     @IBOutlet private weak var dropdownImage: UIImageView!
     @IBOutlet private weak var chartContainerView: UIView!
     
-    private var balanceDataEntry: PieChartDataEntry?
     private var earnDataEntry: PieChartDataEntry?
     private var costDataEntry: PieChartDataEntry?
     
@@ -36,6 +35,7 @@ class StatisticViewController: BaseViewController {
         filterSegmentControl.setButtonTitiles(buttonTitiles: [Category.balance.string, Category.earn.string, Category.cost.string])
         filterSegmentControl.selectorViewColor = state.color()
         filterSegmentControl.setIndex(index: Category.allCases.firstIndex(of: state) ?? 0)
+        changeToIndex(index: Category.allCases.firstIndex(of: state) ?? 0)
         updateChart()
         statisticTableView.delegate = self
         statisticTableView.dataSource = self
@@ -44,12 +44,10 @@ class StatisticViewController: BaseViewController {
     }
     
     private func updateChart() {
-        let balance = DatabaseManager.shared.getBalance()
-        balanceDataEntry = PieChartDataEntry(value: balance > 0 ? Double(balance) : 0)
         earnDataEntry = PieChartDataEntry(value: Double(DatabaseManager.shared.getEarn()))
         costDataEntry = PieChartDataEntry(value: Double(DatabaseManager.shared.getSpent()))
-        guard let balanceDataEntry = self.balanceDataEntry, let earnDataEntry = self.earnDataEntry, let costDataEntry = self.costDataEntry else { return }
-        chartView.configurePieChart(colors: [Category.balance.color(), Category.earn.color(), Category.cost.color()], dataEntries: [balanceDataEntry,earnDataEntry,costDataEntry])
+        guard let earnDataEntry = self.earnDataEntry, let costDataEntry = self.costDataEntry else { return }
+        chartView.configurePieChart(colors: [Category.earn.color(), Category.cost.color()], dataEntries: [earnDataEntry,costDataEntry])
     }
     
     private func setStateColors() {
@@ -115,6 +113,8 @@ extension StatisticViewController: UITableViewDelegate, UITableViewDataSource {
 extension StatisticViewController: NSFetchedResultsControllerDelegate {
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         statisticTableView.reloadData()
-        updateChart()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+            self.updateChart()
+        })
     }
 }

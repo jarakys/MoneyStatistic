@@ -48,7 +48,9 @@ class BalanceDataViewController: UIViewController, StoryboardInstantiable {
         segmentControlView.selectorViewColor = state.color()
         updateColors()
         registerKeyboardNotification()
-        changeToIndex(index: tabTitles.firstIndex(of: state.string) ?? 0)
+        let index = tabTitles.firstIndex(of: state.string) ?? 0
+        segmentControlView.setIndex(index: index)
+        changeToIndex(index: index)
     }
 
     private func registerKeyboardNotification() {
