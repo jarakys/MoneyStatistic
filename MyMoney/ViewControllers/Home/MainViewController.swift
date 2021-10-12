@@ -32,6 +32,7 @@ class MainViewController: BaseViewController {
         super.viewDidLoad()
         self.navigationController?.navigationBar.tintColor = UIColor.label
         titleLabel.textColor = UIColor.label
+        titleLabel.isHidden = true
         segmentControlView.delegate = self
         segmentControlView.setButtonTitiles(buttonTitiles: [Category.balance.string, Category.earn.string, Category.cost.string])
         segmentControlView.selectorViewColor = state.color()

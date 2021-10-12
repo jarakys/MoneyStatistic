@@ -17,7 +17,7 @@ class Utils {
             category.mainCategory = Int32(Category.cost.rawValue)
             category.name = item
         }
-        let categoriesEarn = ["Зарплата", "Повернення долгу", "Підзаробіток", "Подарунок", "Інше"]
+        let categoriesEarn = ["Зарплатня", "Повернення боргу", "Підзаробіток", "Подарунок", "Інше"]
         for (index, item) in categoriesEarn.enumerated() {
             let category = Categories(context: DatabaseManager.shared.context)
             category.uid = UUID() //UUID(uuidString: index.description)

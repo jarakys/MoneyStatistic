@@ -105,9 +105,18 @@ extension BalanceDataViewController: UICollectionViewDataSource, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        if let cell = collectionView.cellForItem(at: indexPath) {
+            cell.contentView.backgroundColor = state.color()
+        }
         category = categories.fetchedObjects?[indexPath.row]
     }
     
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        if let cell = collectionView.cellForItem(at: indexPath) {
+            cell.contentView.backgroundColor = nil
+        }
+    }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let category = categories.fetchedObjects?[indexPath.row]
         return CGSize(width: calculateCellWidth(for: category?.name), height: 50)
