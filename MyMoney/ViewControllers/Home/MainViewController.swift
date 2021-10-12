@@ -87,6 +87,7 @@ class MainViewController: BaseViewController {
     @IBAction func statisticsDidTap(_ sender: Any) {
         let storyboard = UIStoryboard.storyboard(storyboard: .home)
         let statisticViewController: StatisticViewController = storyboard.instantiateViewController()
+        statisticViewController.state = state
         self.navigationController?.pushViewController(statisticViewController, animated: true)
     }
 }
