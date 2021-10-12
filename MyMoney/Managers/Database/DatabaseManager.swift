@@ -102,6 +102,10 @@ class DatabaseManager {
         return 0
     }
     
+    public func deleteReport(report: Reports) {
+        context.delete(report)
+        save()
+    }
     
     
 //    public func getDataBy(typeName: String) throws -> [CostData] {

@@ -35,12 +35,16 @@ class MainViewController: BaseViewController {
         segmentControlView.delegate = self
         segmentControlView.setButtonTitiles(buttonTitiles: [Category.balance.string, Category.earn.string, Category.cost.string])
         segmentControlView.selectorViewColor = state.color()
-        updateCardInfo()
         cardImageView.image = UIImage(named: state.image)!
         floatButton.layer.masksToBounds = true
         floatButton.layer.cornerRadius = floatButton.frame.width / 2
         categoryLabel.text = state.string
         dateLabel.text = Date().getFormatDate(format: "dd.MM.YYYY")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateCardInfo()
     }
     
     private func setColor() {

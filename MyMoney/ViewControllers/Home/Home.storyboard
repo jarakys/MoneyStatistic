@@ -222,7 +222,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gq4-PR-CjH" customClass="ChartView" customModule="MyMoney" customModuleProvider="target">
-                                <rect key="frame" x="70" y="124" width="274" height="274"/>
+                                <rect key="frame" x="60" y="124" width="294" height="294"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Gq4-PR-CjH" secondAttribute="height" multiplier="1:1" id="ppJ-A5-wHw"/>
@@ -247,7 +247,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FfK-72-qXg">
-                                <rect key="frame" x="20" y="443" width="374" height="419"/>
+                                <rect key="frame" x="20" y="463" width="374" height="399"/>
                                 <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" id="HUX-R3-IDM" customClass="PurchaseTableViewCell" customModule="MyMoney" customModuleProvider="target">
@@ -306,7 +306,7 @@
                                 </prototypes>
                             </tableView>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="1YE-7L-BHJ">
-                                <rect key="frame" x="194.66666666666666" y="408" width="25" height="25"/>
+                                <rect key="frame" x="194.66666666666666" y="428" width="25" height="25"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="6x5-C3-2yV"/>
@@ -357,7 +357,7 @@
                             <constraint firstItem="ujc-mc-7wv" firstAttribute="top" secondItem="W38-mh-KPl" secondAttribute="top" id="7sb-JB-GnH"/>
                             <constraint firstItem="Gq4-PR-CjH" firstAttribute="top" secondItem="ZBB-me-CjM" secondAttribute="bottom" id="DQm-gH-GFX"/>
                             <constraint firstItem="W38-mh-KPl" firstAttribute="trailing" secondItem="FfK-72-qXg" secondAttribute="trailing" constant="20" id="Hkr-KY-R0B"/>
-                            <constraint firstItem="Gq4-PR-CjH" firstAttribute="leading" secondItem="W38-mh-KPl" secondAttribute="leading" constant="70" id="Hxd-to-N81"/>
+                            <constraint firstItem="Gq4-PR-CjH" firstAttribute="leading" secondItem="W38-mh-KPl" secondAttribute="leading" constant="60" id="Hxd-to-N81"/>
                             <constraint firstItem="FfK-72-qXg" firstAttribute="top" secondItem="1YE-7L-BHJ" secondAttribute="bottom" constant="10" id="KIP-aK-jUw"/>
                             <constraint firstItem="ZBB-me-CjM" firstAttribute="leading" secondItem="W38-mh-KPl" secondAttribute="leading" id="MVv-3S-eqS"/>
                             <constraint firstItem="1YE-7L-BHJ" firstAttribute="top" secondItem="Gq4-PR-CjH" secondAttribute="bottom" constant="10" id="RZm-sA-szw"/>

@@ -102,5 +102,6 @@ extension StatisticViewController: UITableViewDelegate, UITableViewDataSource {
 extension StatisticViewController: NSFetchedResultsControllerDelegate {
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         statisticTableView.reloadData()
+        updateChart()
     }
 }
