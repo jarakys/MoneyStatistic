@@ -394,11 +394,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Rbf-FV-NWy">
-                                <rect key="frame" x="0.0" y="94.999999999999972" width="414" height="403.33333333333326"/>
-                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="r3j-nG-QjX">
-                                    <size key="itemSize" width="128" height="128"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" contentInsetAdjustmentBehavior="never" bouncesZoom="NO" dataMode="prototypes" prefetchingEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rbf-FV-NWy">
+                                <rect key="frame" x="0.0" y="97.999999999999972" width="414" height="403.33333333333326"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1tW-4O-LPW">
+                                    <size key="itemSize" width="0.0" height="0.0"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -406,7 +406,7 @@
                                 <cells/>
                             </collectionView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Cmn-zt-Nkz">
-                                <rect key="frame" x="20" y="518.33333333333337" width="374" height="34"/>
+                                <rect key="frame" x="20" y="521.33333333333337" width="374" height="34"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="247" verticalHuggingPriority="248" horizontalCompressionResistancePriority="747" verticalCompressionResistancePriority="748" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sfw-MU-aAH">
                                         <rect key="frame" x="0.0" y="0.0" width="224.33333333333334" height="34"/>
@@ -464,7 +464,7 @@
                         <constraints>
                             <constraint firstItem="lLI-Dx-Dwv" firstAttribute="trailing" secondItem="Cmn-zt-Nkz" secondAttribute="trailing" constant="20" id="2fb-tx-rIJ"/>
                             <constraint firstItem="hm1-sD-sgg" firstAttribute="leading" secondItem="VIw-IH-TzW" secondAttribute="leading" id="3rO-kd-odp"/>
-                            <constraint firstItem="Rbf-FV-NWy" firstAttribute="top" secondItem="hm1-sD-sgg" secondAttribute="bottom" id="7wR-3u-oS6"/>
+                            <constraint firstItem="Rbf-FV-NWy" firstAttribute="top" secondItem="hm1-sD-sgg" secondAttribute="bottom" constant="3" id="7wR-3u-oS6"/>
                             <constraint firstItem="Cmn-zt-Nkz" firstAttribute="leading" secondItem="lLI-Dx-Dwv" secondAttribute="leading" constant="20" id="DUw-wv-yXG"/>
                             <constraint firstAttribute="trailing" secondItem="hm1-sD-sgg" secondAttribute="trailing" id="Rxc-Ff-CHh"/>
                             <constraint firstItem="lLI-Dx-Dwv" firstAttribute="trailing" secondItem="Rbf-FV-NWy" secondAttribute="trailing" id="TvF-Hu-2Fm"/>

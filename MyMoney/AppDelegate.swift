@@ -35,6 +35,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UINavigationBar.appearance().isTranslucent = false
         }
         // Override point for customization after application launch.
+        
+        if LocalStorageManager.shared.get(key: .isFirstInit, defaultValue: true) {
+            Utils.initDb()
+            LocalStorageManager.shared.set(key: .isFirstInit, value: false)
+        }
+        
         return true
     }
 

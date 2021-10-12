@@ -24,6 +24,8 @@
 		ED4CEB4127135485007BD6D4 /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ED4CEB3F27135485007BD6D4 /* Database.xcdatamodeld */; };
 		ED4CEB4327136043007BD6D4 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4CEB4227136043007BD6D4 /* CategoryCell.swift */; };
 		ED4CEB4527136056007BD6D4 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED4CEB4427136056007BD6D4 /* CategoryCell.xib */; };
+		ED4CEB4827157682007BD6D4 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4CEB4727157682007BD6D4 /* Utils.swift */; };
+		ED4CEB4B27157A15007BD6D4 /* LocalStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4CEB4A27157A15007BD6D4 /* LocalStorageManager.swift */; };
 		ED4F141523FB24C10082CAD7 /* SFProDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED4F141223FB24C00082CAD7 /* SFProDisplay-Regular.ttf */; };
 		ED4F141623FB24C10082CAD7 /* SFProDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED4F141323FB24C10082CAD7 /* SFProDisplay-Bold.ttf */; };
 		ED4F141723FB24C10082CAD7 /* SFProDisplay-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED4F141423FB24C10082CAD7 /* SFProDisplay-Medium.ttf */; };
@@ -79,6 +81,8 @@
 		ED4CEB4027135485007BD6D4 /* Database.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Database.xcdatamodel; sourceTree = "<group>"; };
 		ED4CEB4227136043007BD6D4 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		ED4CEB4427136056007BD6D4 /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
+		ED4CEB4727157682007BD6D4 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		ED4CEB4A27157A15007BD6D4 /* LocalStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageManager.swift; sourceTree = "<group>"; };
 		ED4F141223FB24C00082CAD7 /* SFProDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Regular.ttf"; sourceTree = "<group>"; };
 		ED4F141323FB24C10082CAD7 /* SFProDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Bold.ttf"; sourceTree = "<group>"; };
 		ED4F141423FB24C10082CAD7 /* SFProDisplay-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Medium.ttf"; sourceTree = "<group>"; };
@@ -155,6 +159,24 @@
 			path = StatisticCell;
 			sourceTree = "<group>";
 		};
+		ED4CEB4627157679007BD6D4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				ED4CEB4727157682007BD6D4 /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		ED4CEB4927157A01007BD6D4 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				ED4CEB4627157679007BD6D4 /* Utils */,
+				ED7BB29B24C19D4800014AFD /* Database */,
+				ED4CEB4A27157A15007BD6D4 /* LocalStorageManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		ED4F141023FB246F0082CAD7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,7 +217,7 @@
 		ED6F939623F88C5000472C8B /* MyMoney */ = {
 			isa = PBXGroup;
 			children = (
-				ED7BB29B24C19D4800014AFD /* Database */,
+				ED4CEB4927157A01007BD6D4 /* Managers */,
 				EDDC454424A21B23006E524B /* Coordinator */,
 				ED0435B5247DAB6E00403CC2 /* Protocols */,
 				ED0435B2247D991000403CC2 /* Animations */,
@@ -426,6 +448,7 @@
 				ED7BB2CA24C1C66200014AFD /* BlurLoader.swift in Sources */,
 				ED0435B7247DAB9700403CC2 /* StoryboardInstantiable.swift in Sources */,
 				ED6F93CE23F980B900472C8B /* TutorialPageViewController.swift in Sources */,
+				ED4CEB4B27157A15007BD6D4 /* LocalStorageManager.swift in Sources */,
 				ED1D2A3924AA05BC00D49024 /* StatisticCell.swift in Sources */,
 				ED6F93C823F97B8A00472C8B /* TutorialViewController.swift in Sources */,
 				EDDC454A24A37551006E524B /* ChartView.swift in Sources */,
@@ -433,6 +456,7 @@
 				ED0435BB247DADB200403CC2 /* Storyboard+Type.swift in Sources */,
 				ED0435BD247DAFE600403CC2 /* UIViewController+InstantiateFromStoryboard.swift in Sources */,
 				ED1D2A3024AA009300D49024 /* StatisticModel.swift in Sources */,
+				ED4CEB4827157682007BD6D4 /* Utils.swift in Sources */,
 				ED6F93D423F9D8AC00472C8B /* Settings.swift in Sources */,
 				ED7B0FF92483A94300F5782B /* BalanceDataViewController.swift in Sources */,
 				ED6F93CA23F97C2B00472C8B /* Strings.swift in Sources */,

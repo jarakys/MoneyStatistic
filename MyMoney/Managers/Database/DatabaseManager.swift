@@ -29,14 +29,14 @@ class DatabaseManager {
         }
     }
     
-    func createReport(category: Categories, currency: Currencies, value: Float) {
+    func createReport(category: Categories?, currency: Currencies?, value: Float) {
         let report = Reports(context: context)
         report.category = category
         report.value = value
         report.uid = UUID()
         report.currency = currency
         report.userId = UUID()
-        category.addToReports(report)
+        category?.addToReports(report)
         save()
     }
     

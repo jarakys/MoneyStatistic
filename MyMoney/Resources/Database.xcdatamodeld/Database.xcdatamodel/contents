@@ -21,7 +21,7 @@
         <attribute name="userId" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="value" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
         <relationship name="category" maxCount="1" deletionRule="Nullify" destinationEntity="Categories" inverseName="reports" inverseEntity="Categories"/>
-        <relationship name="currency" maxCount="1" deletionRule="Nullify" destinationEntity="Currencies"/>
+        <relationship name="currency" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Currencies"/>
     </entity>
     <fetchRequest name="FetchBalance" entity="Reports" predicateString="category.mainCategory == 0"/>
     <elements>

@@ -46,17 +46,15 @@ class BalanceDataViewController: UIViewController, StoryboardInstantiable {
         segmentControlView.delegate = self
         segmentControlView.setButtonTitiles(buttonTitiles: tabTitles)
         segmentControlView.selectorViewColor = state.color()
-        categoriesCollectionView.roundCorners([.bottomLeft, .bottomRight], radius: 25)
         updateColors()
         registerKeyboardNotification()
-        segmentControlView.setIndex(index: tabTitles.firstIndex(of: state.string) ?? 0)
+        changeToIndex(index: tabTitles.firstIndex(of: state.string) ?? 0)
     }
 
     private func registerKeyboardNotification() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
-    
     
     private func updateColors() {
         segmentControlView.selectorViewColor = state.color()
@@ -67,6 +65,7 @@ class BalanceDataViewController: UIViewController, StoryboardInstantiable {
         guard let text = sumTextField.text else { return }
         sumTextField.resignFirstResponder()
         sumTextField.text = ""
+        DatabaseManager.shared.createReport(category: category, currency: nil, value: Float(text) ?? 0.0)
     }
     
     @objc private func keyboardWillShow(notification: NSNotification) {
@@ -92,7 +91,8 @@ class BalanceDataViewController: UIViewController, StoryboardInstantiable {
     }
 }
 
-extension BalanceDataViewController: UICollectionViewDataSource {
+// MARK: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
+extension BalanceDataViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         (categories.fetchedObjects ?? []).count
     }
@@ -103,14 +103,24 @@ extension BalanceDataViewController: UICollectionViewDataSource {
         (cell as? CategoryCell)?.configure(mainCategory: Category(rawValue: Int(category?.mainCategory ?? 0)), text: category?.name ?? "")
         return cell
     }
-}
-
-extension BalanceDataViewController: UICollectionViewDelegate {
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         category = categories.fetchedObjects?[indexPath.row]
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let category = categories.fetchedObjects?[indexPath.row]
+        return CGSize(width: calculateCellWidth(for: category?.name), height: 50)
+    }
+    
+    private func calculateCellWidth(for text: String?) -> CGFloat {
+        let font = UIFont.systemFont(ofSize: 17)
+        let width = (text?.size(withAttributes: [NSAttributedString.Key.font : font as Any]).width ?? 50) + 60
+        return width
+    }
 }
 
+// MARK: SegmentControlDelegate
 extension BalanceDataViewController : SegmentControlDelegate {
     func changeToIndex(index: Int) {
         state = Category(rawValue: index+1)
@@ -121,6 +131,7 @@ extension BalanceDataViewController : SegmentControlDelegate {
     }
 }
 
+// MARK: NSFetchedResultsControllerDelegate
 extension BalanceDataViewController: NSFetchedResultsControllerDelegate {
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         categoriesCollectionView.reloadData()

@@ -17,6 +17,7 @@ class StatisticCell: UITableViewCell, ReusableCell {
         super.awakeFromNib()
         categoryIndicatorVIew.layer.cornerRadius = categoryIndicatorVIew.frame.height / 2
         categoryIndicatorVIew.layer.masksToBounds = true
+
     }
     
     func configure(for report: Reports?) {

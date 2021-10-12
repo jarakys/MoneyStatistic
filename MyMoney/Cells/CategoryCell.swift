@@ -15,7 +15,11 @@ class CategoryCell: UICollectionViewCell, ReusableCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         indicatorView.layer.cornerRadius = indicatorView.frame.height / 2
-        indicatorView.clipsToBounds = true
+        indicatorView.layer.masksToBounds = true
+        layer.cornerRadius = 10
+        layer.masksToBounds = true
+        layer.borderWidth = 0.5
+        layer.borderColor = UIColor.lightGray.cgColor
     }
     
     func configure(mainCategory: Category, text: String) {

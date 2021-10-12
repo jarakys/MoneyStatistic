@@ -43,7 +43,8 @@ class StatisticViewController: BaseViewController {
     }
     
     private func updateChart() {
-        balanceDataEntry = PieChartDataEntry(value: Double(DatabaseManager.shared.getBalance()))
+        let balance = DatabaseManager.shared.getBalance()
+        balanceDataEntry = PieChartDataEntry(value: balance > 0 ? Double(balance) : 0)
         earnDataEntry = PieChartDataEntry(value: Double(DatabaseManager.shared.getEarn()))
         costDataEntry = PieChartDataEntry(value: Double(DatabaseManager.shared.getSpent()))
         guard let balanceDataEntry = self.balanceDataEntry, let earnDataEntry = self.earnDataEntry, let costDataEntry = self.costDataEntry else { return }
