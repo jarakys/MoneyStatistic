@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let navController = UINavigationController()
         navController.navigationBar.prefersLargeTitles = true
         coordinator = MainCoordinator(navigationController: navController)
-        coordinator?.goToAuth()
+        coordinator?.openMainScreen()
         window = UIWindow(windowScene: windowScene)
         window?.overrideUserInterfaceStyle = .dark
         window?.rootViewController = navController
