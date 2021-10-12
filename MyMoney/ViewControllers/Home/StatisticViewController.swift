@@ -40,6 +40,7 @@ class StatisticViewController: BaseViewController {
         statisticTableView.delegate = self
         statisticTableView.dataSource = self
         statisticTableView.register(StatisticCell.nib, forCellReuseIdentifier: StatisticCell.reusableIndentify)
+        statisticTableView.allowsSelection = false
     }
     
     private func updateChart() {
@@ -95,6 +96,18 @@ extension StatisticViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .normal, title: "Видалити", handler: { [weak self]
+            (ac: UIContextualAction, view: UIView, success: (Bool) -> Void) in
+            success(true)
+            guard let report = self?.reports.fetchedObjects?[indexPath.row] else { return }
+
+            DatabaseManager.shared.deleteReport(report: report)
+        })
+        deleteAction.backgroundColor = .red
+        return UISwipeActionsConfiguration(actions: [deleteAction])
     }
 }
 

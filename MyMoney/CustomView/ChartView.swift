@@ -39,13 +39,6 @@ class ChartView: UIView {
     }
     
     func configurePieChart(colors: [UIColor], dataEntries: [PieChartDataEntry]) {
-//        var sortData: [ChartDataEntry] = []
-//        for i in 0..<dataEntries.count {
-////            let temp = ChartDataEntry(x: Double(i), y: dataEntries[i].y, data: <#T##Any?#>)
-//            let ss = ChartDataEntry(x: Double(i), y: dataEntries[i].y, data: dataEntries[i].y)
-//            sortData.append(ss)
-//            print(sortData[i])
-//        }
         charDataSet = PieChartDataSet(entries: dataEntries, label: "")
         let chartData = PieChartData(dataSet: charDataSet!)
         charDataSet?.colors = colors
@@ -56,6 +49,7 @@ class ChartView: UIView {
         charDataSet?.yValuePosition = .outsideSlice
         chartData.setValueTextColor(.systemOrange)
         pieChart.data = chartData
+        pieChart.usePercentValuesEnabled = false
         chartData.setValueFormatter(DefaultValueFormatter(decimals: 2))
     }
     

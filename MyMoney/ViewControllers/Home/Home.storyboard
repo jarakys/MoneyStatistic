@@ -317,10 +317,10 @@
                                 </connections>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ujc-mc-7wv">
-                                <rect key="frame" x="109.33333333333333" y="44" width="195.66666666666669" height="40"/>
+                                <rect key="frame" x="10" y="44" width="394" height="40"/>
                                 <subviews>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BV1-yg-sAo" userLabel="Change date">
-                                        <rect key="frame" x="171.66666666666669" y="0.0" width="24" height="40"/>
+                                        <rect key="frame" x="171.66666666666663" y="0.0" width="222.33333333333337" height="40"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="efe-3X-fBi"/>
@@ -366,6 +366,8 @@
                             <constraint firstItem="ZBB-me-CjM" firstAttribute="top" secondItem="ujc-mc-7wv" secondAttribute="bottom" id="fcg-Kx-rJc"/>
                             <constraint firstItem="FfK-72-qXg" firstAttribute="leading" secondItem="W38-mh-KPl" secondAttribute="leading" constant="20" id="fdq-0d-iwg"/>
                             <constraint firstItem="W38-mh-KPl" firstAttribute="bottom" secondItem="FfK-72-qXg" secondAttribute="bottom" id="kJx-VZ-UzB"/>
+                            <constraint firstItem="W38-mh-KPl" firstAttribute="trailing" secondItem="ujc-mc-7wv" secondAttribute="trailing" constant="10" id="ljU-6M-Ujt"/>
+                            <constraint firstItem="ujc-mc-7wv" firstAttribute="leading" secondItem="W38-mh-KPl" secondAttribute="leading" constant="10" id="o20-pP-csk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Статистика" id="Fcu-Ge-9Iq"/>
