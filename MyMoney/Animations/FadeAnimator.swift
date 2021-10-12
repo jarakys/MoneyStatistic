@@ -15,8 +15,8 @@ final class FadeAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     static let duration: TimeInterval = 0.5
 
     private let type: PresentationType
-    private let firstViewController: UIViewController
-    private let secondViewController: UIViewController
+    private weak var firstViewController: UIViewController?
+    private weak var secondViewController: UIViewController?
 
     // B2 - 10
     init?(type: PresentationType, firstViewController: UIViewController, secondViewController: UIViewController) {
@@ -37,7 +37,7 @@ final class FadeAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         let containerView = transitionContext.containerView
 
-        guard let toView = secondViewController.view
+        guard let toView = secondViewController?.view
             else {
                 transitionContext.completeTransition(false)
                 return
@@ -45,7 +45,7 @@ final class FadeAnimator: NSObject, UIViewControllerAnimatedTransitioning {
 
         containerView.addSubview(toView)
         
-        guard let window = firstViewController.view.window ?? secondViewController.view.window
+        guard let window = firstViewController?.view.window ?? secondViewController?.view.window
             else {
                 transitionContext.completeTransition(true)
                 return
